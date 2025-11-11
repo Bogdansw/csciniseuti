@@ -2,29 +2,29 @@ const newsData = [
     {
         id: 1,
         date: "31 Mai, 2024",
-        category: "Noutăți și Anunțuri | Uncategorized",
+        category: "Noutăți și Anunțuri",
         title: "Ziua Mondială fără Tutun",
         description: "Ziua mondială fără tutun, marcată anual pe 31 mai, reprezintă un prilej important pentru a atrage [...]",
         image: "faratutun.jpg.jpg",
-        link: "anunt-1.html"
+        link: "anunt1.html"
     },
     {
         id: 2,
         date: "19 Mai, 2024",
-        category: "Uncategorized",
+        category: "...",
         title: "Ziua Internațională a Medicinii de Familie",
         description: "Ziua internațională a medicilor de familie se sărbătorește anual în data de 19 mai. Scopul este [...]",
         image: "medicifamilie.jpg",
-        link: "anunt-2.html"
+        link: "anunt2.html"
     },
     {
         id: 3,
         date: "17 Mai, 2024",
-        category: "Uncategorized",
+        category: "...",
         title: "Ziua Internațională de luptă împotriva Hipertensiunii Arteriale",
         description: "În fiecare an, la 17 mai, este marcată Ziua mondială de luptă împotriva hipertensiunii arteriale – [...]",
         image: "tensiune.webp",
-        link: "anunt-3.html"
+        link: "anunt3.html"
     }
 ];
 
@@ -107,3 +107,5 @@ function changeDisplayCount(count) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { addNews, displayNews, changeDisplayCount };
 }
+
+console.log("nimic de vazut aici, nu cauta.")
