@@ -1,111 +1,75 @@
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference or default to 'light-mode'
+const currentTheme = localStorage.getItem('theme') || 'light-mode';
+body.classList.add(currentTheme);
+
+// Set checkbox state based on current theme
+if (currentTheme === 'dark-mode') {
+    themeToggle.checked = true;
+}
+
+// Listen for toggle changes
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light-mode');
+    }
+});
+
+// News data for page1.html
 const newsData = [
     {
         id: 1,
-        date: "31 Mai, 2024",
-        category: "Noutăți și Anunțuri",
-        title: "Ziua Mondială fără Tutun",
-        description: "Ziua mondială fără tutun, marcată anual pe 31 mai, reprezintă un prilej important pentru a atrage [...]",
-        image: "faratutun.jpg.jpg",
-        link: "anunt1.html"
+        title: "Program extins în perioada sărbătorilor",
+        description: "Vă informăm că în perioada sărbătorilor de iarnă, programul va fi modificat...",
+        date: "15 Dec 2024",
+        category: "Anunț",
+        image: "https://via.placeholder.com/400x250"
     },
     {
         id: 2,
-        date: "19 Mai, 2024",
-        category: "...",
-        title: "Ziua Internațională a Medicinii de Familie",
-        description: "Ziua internațională a medicilor de familie se sărbătorește anual în data de 19 mai. Scopul este [...]",
-        image: "medicifamilie.jpg",
-        link: "anunt2.html"
+        title: "Vaccinare antigripală gratuită",
+        description: "A început campania de vaccinare antigripală gratuită pentru persoanele eligibile...",
+        date: "10 Dec 2024",
+        category: "Sănătate",
+        image: "https://via.placeholder.com/400x250"
     },
     {
         id: 3,
-        date: "17 Mai, 2024",
-        category: "...",
-        title: "Ziua Internațională de luptă împotriva Hipertensiunii Arteriale",
-        description: "În fiecare an, la 17 mai, este marcată Ziua mondială de luptă împotriva hipertensiunii arteriale – [...]",
-        image: "tensiune.webp",
-        link: "anunt3.html"
+        title: "Servicii noi disponibile",
+        description: "Suntem bucuroși să anunțăm introducerea unor noi servicii medicale...",
+        date: "5 Dec 2024",
+        category: "Servicii",
+        image: "https://via.placeholder.com/400x250"
     }
 ];
 
-function createNewsCard(news) {
-    return `
-        <a href="${news.link}" class="news-card">
-            <div class="card-image">
-                <img src="${news.image}" alt="${news.title}">
-                <div class="card-date">${news.date}</div>
-            </div>
-            <div class="card-content">
-                <div class="card-category">${news.category}</div>
-                <h3 class="card-title">${news.title}</h3>
-                <p class="card-description">${news.description}</p>
-                <span class="card-link">Citește mai mult</span>
-            </div>
-        </a>
-    `;
-}
-
-function displayNews() {
-    const newsGrid = document.getElementById('newsGrid');
-    
-    if (!newsGrid) return; 
-    
-    const recentNews = newsData.slice(0, 3);
-    
-    const newsHTML = recentNews.map(news => createNewsCard(news)).join('');
-    
-    newsGrid.innerHTML = newsHTML;
-}
-
-function animateOnScroll() {
-    const cards = document.querySelectorAll('.news-card');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    entry.target.style.transition = 'all 0.5s ease';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 150); 
-            }
-        });
-    }, {
-        threshold: 0.1
+// Load news if newsGrid exists (for page1.html)
+const newsGrid = document.getElementById('newsGrid');
+if (newsGrid) {
+    newsData.forEach(news => {
+        const newsCard = `
+            <a href="#" class="news-card">
+                <div class="card-image">
+                    <img src="${news.image}" alt="${news.title}">
+                    <div class="card-date">${news.date}</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-category">${news.category}</div>
+                    <h3 class="card-title">${news.title}</h3>
+                    <p class="card-description">${news.description}</p>
+                    <span class="card-link">Citește mai mult</span>
+                </div>
+            </a>
+        `;
+        newsGrid.innerHTML += newsCard;
     });
-    
-    cards.forEach(card => observer.observe(card));
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    displayNews();
-    setTimeout(animateOnScroll, 100);
-});
-
-function addNews(newsItem) {
-    newsData.unshift(newsItem);
-    displayNews(); 
-    setTimeout(animateOnScroll, 100); 
-}
- 
-function changeDisplayCount(count) {
-    const newsGrid = document.getElementById('newsGrid');
-    
-    if (!newsGrid) return;
-    
-    const selectedNews = newsData.slice(0, count);
-    const newsHTML = selectedNews.map(news => createNewsCard(news)).join('');
-    newsGrid.innerHTML = newsHTML;
-    
-    setTimeout(animateOnScroll, 100);
-}
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { addNews, displayNews, changeDisplayCount };
-}
-
-console.log("nimic de vazut aici, nu cauta.")

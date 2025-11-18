@@ -2,13 +2,23 @@
     --main-blue: #2577C7;
     --white: #ffffff;
     --light-gray: #f5f5f5;
+    --dark-bg: #1a1a1a;
+    --dark-surface: #2c2c2c;
+    --dark-text: #f5f5f5;
+    --dark-text-secondary: #aaa;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--white);
+    color: #333;
 }
 
 .top-header {
@@ -18,24 +28,61 @@
     background-color: var(--white);
     padding: 15px 50px;
     border-bottom: 2px solid var(--main-blue);
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
 }
 
 .logo {
     font-size: 1.6rem;
     font-weight: bold;
     color: var(--main-blue);
+    transition: color 0.3s ease;
 }
 
-.contact-info img {
-    vertical-align: middle;
-    margin-right: 8px;
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.contact-icon-bg {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.contact-icon-bg img {
     width: 20px;
     height: 20px;
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
 }
-
+.contact-text {
+    line-height: 1.4;
+}
+.contact-text span {
+    font-size: 0.85rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+.contact-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 .navbar {
     background-color: #2577C7;
     padding: 10px 0;
+    transition: background-color 0.3s ease;
 }
 
 .navbar ul {
@@ -67,7 +114,6 @@
     color: white;
     transform: scale(1.05);
 }
-
 
 .hero {
     position: relative;
@@ -131,17 +177,24 @@
     border-radius: 25px;
     font-size: 1.1em;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn-hero:hover {
-    background-color: #2477C7;
+    background-color: #1f5fa0;
     transform: scale(1.05);
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translate(-50%, -40%); }
-    to { opacity: 1; transform: translate(-50%, -50%); }
+    from { 
+        opacity: 0; 
+        transform: translate(-50%, -40%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translate(-50%, -50%); 
+    }
 }
 
 .main-buttons {
@@ -159,17 +212,20 @@
     font-size: 1.1rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .main-buttons button:hover {
     background-color: #1f5fa0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .news {
     background-color: var(--light-gray);
     padding: 40px 20px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .news h2 {
@@ -192,6 +248,12 @@
     width: 300px;
     text-align: left;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.news article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .news article h3 {
@@ -211,6 +273,18 @@
     flex: 1;
 }
 
+.contact-details h2 {
+    color: var(--main-blue);
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
 .map {
     flex: 1;
 }
@@ -220,13 +294,16 @@
     height: 300px;
     border: none;
     border-radius: 8px;
+    transition: filter 0.3s ease;
 }
+
 footer {
     background-color: var(--main-blue);
     color: var(--white);
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
 .info-section {
@@ -237,6 +314,7 @@ footer {
     background-color: #d9efff;
     padding: 60px 20px;
     flex-wrap: wrap;
+    transition: background-color 0.3s ease;
 }
 
 .info-card {
@@ -247,10 +325,14 @@ footer {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none; 
-    color: #333; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .info-card img {
@@ -258,13 +340,14 @@ footer {
     height: 70px;
     margin-bottom: 20px;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .info-card p {
     font-size: 1.1rem;
     color: #444;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .info-card:hover {
@@ -275,7 +358,6 @@ footer {
 .info-card:hover img {
     opacity: 1;
 }
-
 
 .news-section {
     max-width: 1200px;
@@ -297,6 +379,7 @@ footer {
 .section-header p {
     color: #666;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 .news-grid {
@@ -311,7 +394,7 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -370,6 +453,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 .card-title {
@@ -377,6 +461,7 @@ footer {
     color: #333;
     margin-bottom: 15px;
     line-height: 1.4;
+    transition: color 0.3s ease;
 }
 
 .card-description {
@@ -384,6 +469,7 @@ footer {
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: 0.95rem;
+    transition: color 0.3s ease;
 }
 
 .card-link {
@@ -431,10 +517,215 @@ footer {
     margin-left: 8px;
 }
 
+.header-right-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before { 
+    position: absolute;
+    content: ""; 
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    
+
+    background-image: url('sun.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px; 
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    
+
+    background-image: url('moon.png');
+}
+
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .top-header {
+    background-color: var(--dark-surface);
+    border-bottom-color: var(--main-blue);
+}
+
+body.dark-mode .logo {
+    color: var(--main-blue);
+}
+
+body.dark-mode .contact-item .contact-icon-bg {
+    background-color: #333;
+}
+
+body.dark-mode .contact-item .contact-icon-bg img {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+body.dark-mode .contact-item .contact-text span {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .contact-item .contact-text p {
+    color: var(--dark-text);
+}
+
+body.dark-mode .navbar {
+    background-color: #1f5fa0; 
+}
+
+body.dark-mode .navbar button {
+    background-color: var(--dark-surface);
+    color: var(--main-blue);
+    border-color: var(--main-blue);
+}
+
+body.dark-mode .navbar button:hover {
+    background-color: var(--main-blue);
+    color: var(--white);
+}
+
+body.dark-mode .news {
+    background-color: var(--dark-bg);
+}
+
+body.dark-mode .news article {
+    background-color: var(--dark-surface);
+    border-color: #444;
+    color: var(--dark-text);
+}
+
+body.dark-mode .info-section {
+    background-color: #222;
+}
+
+body.dark-mode .info-card {
+    background-color: var(--dark-surface);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    color: var(--dark-text);
+}
+
+body.dark-mode .info-card p {
+    color: var(--dark-text);
+}
+
+body.dark-mode .info-card img {
+    filter: brightness(0) invert(1); 
+}
+
+body.dark-mode .section-header h1 {
+    color: var(--main-blue);
+}
+
+body.dark-mode .section-header p {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .news-card {
+    background: var(--dark-surface);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .card-title {
+    color: var(--dark-text);
+}
+
+body.dark-mode .card-category,
+body.dark-mode .card-description {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .contact-details h2 {
+    color: var(--main-blue);
+}
+
+body.dark-mode .contact-details p {
+    color: var(--dark-text);
+}
+
+body.dark-mode .map iframe {
+    filter: invert(90%) hue-rotate(180deg);
+}
+
+body.dark-mode footer {
+    background-color: #1f5fa0; 
+    color: var(--dark-text);
+} 
 @media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .header-right-container {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start; 
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-item {
+        gap: 10px;
+    }
+
+    .theme-switch-container {
+        justify-content: center;
+        width: 100%;
+    }
+
     .contact-map {
         flex-direction: column;
+        padding: 30px 20px;
     }
 
     .main-buttons {
@@ -444,6 +735,15 @@ footer {
 
     .navbar ul {
         flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
     }
     
     .section-header h1 {
@@ -461,5 +761,15 @@ footer {
     
     .news-section {
         padding: 40px 20px;
+    }
+
+    .info-section {
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .info-card {
+        width: 100%;
+        max-width: 300px;
     }
 }
