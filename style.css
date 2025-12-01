@@ -498,7 +498,7 @@ footer {
     padding: 15px 40px;
     font-size: 1.1rem;
     border-radius: 50px;
-    cursor: pointer;
+    cursor: pointer;-
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(37, 119, 199, 0.3);
@@ -577,7 +577,7 @@ input:checked + .slider:before {
 
     background-image: url('moon.png');
 }
-
+-
 
 body.dark-mode {
     background-color: var(--dark-bg);
@@ -771,5 +771,254 @@ body.dark-mode footer {
     .info-card {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+.news-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    animation: slideUp 0.4s ease;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close:hover {
+    background-color: #ff4444;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.modal-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-meta {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-date,
+.modal-category {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-category {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.modal-body {
+    padding: 40px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.modal-body h2 {
+    color: var(--main-blue);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.modal-body h3 {
+    color: var(--main-blue);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.modal-body ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.modal-body li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.modal-body strong {
+    color: var(--main-blue);
+}
+
+.modal-body em {
+    color: #666;
+}
+
+body.dark-mode .modal-content {
+    background-color: var(--dark-surface);
+}
+
+body.dark-mode .modal-close {
+    background-color: rgba(44, 44, 44, 0.9);
+    color: var(--dark-text);
+}
+
+body.dark-mode .modal-close:hover {
+    background-color: #ff4444;
+    color: white;
+}
+
+body.dark-mode .modal-date,
+body.dark-mode .modal-category {
+    background-color: rgba(44, 44, 44, 0.95);
+    color: var(--dark-text);
+}
+
+body.dark-mode .modal-category {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+body.dark-mode .modal-body {
+    color: var(--dark-text);
+}
+
+body.dark-mode .modal-body h2,
+body.dark-mode .modal-body h3 {
+    color: var(--main-blue);
+}
+
+body.dark-mode .modal-body p {
+    color: var(--dark-text);
+}
+
+body.dark-mode .modal-body li {
+    color: var(--dark-text);
+}
+
+body.dark-mode .modal-body strong {
+    color: var(--main-blue);
+}
+
+body.dark-mode .modal-body em {
+    color: var(--dark-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .news-modal {
+        padding: 0;
+        align-items: flex-start;
+    }
+    
+    .modal-content {
+        border-radius: 0;
+        max-width: 100%;
+        min-height: 100vh;
+    }
+    
+    .modal-header {
+        height: 250px;
+        border-radius: 0;
+    }
+    
+    .modal-body {
+        padding: 25px 20px;
+    }
+    
+    .modal-body h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body h3 {
+        font-size: 1.2rem;
+    }
+    
+    .modal-body p,
+    .modal-body li {
+        font-size: 0.95rem;
+    }
+    
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
     }
 }
