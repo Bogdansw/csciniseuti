@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrul de sănătate Cinișeuți</title>
+    <link rel="icon" type="image/png" href="bowl-hygieia.webp">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header class="top-header">
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="Cs-Ciniseuti.png" alt="Logo CS Cinișeuți">
+        </a>
+    </div>
+
+
+
+            <div class="contact-info">
+                
+                <div class="contact-item">
+                    <div class="contact-icon-bg">
+                        <img src="envelope.png" alt="Email"> 
+                    </div>
+                    <div class="contact-text">
+                        <span>Email:</span>
+                        <p>cs.ciniseuti@ms.md</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon-bg">
+                        <img src="phone-call.png" alt="Telefon">
+                    </div>
+                    <div class="contact-text">
+                        <span>Telefon:</span>
+                        <p>+37325451307</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="theme-switch-container">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+        </div>
+    </header>
+
+    <nav class="navbar">
+    <ul>
+        <li><button onclick="#">Acasă</button></li>
+        <li><button onclick="#">Servicii</button></li>
+        <li><button onclick="#">Echipa</button></li>
+        <li>
+            <button onclick="window.open('https://sia.amp.md/', '_blank');">
+                Programări online la medic
+            </button>
+        </li>
+        <li><button onclick="#">Contact</button></li>
+    </ul>
+</nav>
+
+
+ <section class="info-section">
+    <a href="http://cnam.md/" class="info-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/870/870188.png" alt="CNAM">
+        <p>CNAM</p>
+    </a>
+
+    <a href="medicamente.html" class="info-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="Medicamente">
+        <p>Medicamente și dispozitive medicale compensate</p>
+    </a>
+
+    <a href="05-08-203-26.12.2024.semnat.semnat.pdf" class="info-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3389/3389081.png" alt="Contracte">
+        <p>Contracte CNAM</p>
+    </a>
+</section>
+
+    <section class="news-section">
+        <div class="section-header">
+            <h1>Noutăți și Anunțuri</h1>
+            <p>Vezi cele mai recente noutăți și anunțuri.</p>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+
+        </div>
+
+        <button class="view-all-btn" onclick="toggleAllNews()">
+            Vezi toate
+        </button>
+    </section>
+
+    <section class="contact-map">
+        <div class="contact-details">
+            <h2>Date de contact</h2>
+            <p>Adresa: ... </p>
+            <p>Telefon: +37325451307</p>
+            <p>Email: cs.ciniseuti@ms.md</p>
+            <p>Program: Luni - Vineri, 08:00 - 18:00</p>
+        </div>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.000000!2d28.837000!3d47.010000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97dbf!2sChisinau!5e0!3m2!1sro!2s!4v000000000"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 cscinișeuți ( this site is only a remake of the original )</p>
+    </footer>
+
+    <script src="testjs.js"></script>
+</body>
+</html>
