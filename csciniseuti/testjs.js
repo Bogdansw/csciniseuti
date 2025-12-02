@@ -212,7 +212,7 @@ function createNewsCard(news) {
     return `
         <div class="news-card" data-id="${news.id}">
             <div class="card-image">
-                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/400x250?text=Imagine+Indisponibilă'">
+                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/400x250?text=Imagine+Indisponibila'">
                 <div class="card-date">${news.date}</div>
             </div>
             <div class="card-content">
@@ -241,7 +241,7 @@ function openNewsModal(newsId) {
         <div class="modal-content">
             <button class="modal-close" onclick="closeNewsModal()">&times;</button>
             <div class="modal-header">
-                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/800x400?text=Imagine+Indisponibilă'">
+                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/800x400?text=Imagine+Indisponibila'">
                 <div class="modal-meta">
                     <span class="modal-date">📅 ${news.date}</span>
                     <span class="modal-category">${news.category}</span>
@@ -306,35 +306,40 @@ function animateOnScroll() {
     cards.forEach(card => observer.observe(card));
 }
 
+<<<<<<< HEAD
+=======
+
 document.addEventListener('DOMContentLoaded', () => {
-    displayNews();
-    setTimeout(animateOnScroll, 100);
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    displayNews();
+    setTimeout(animateOnScroll, 100);
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    function toggleTheme() {
-        if (themeToggle.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark'); 
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light'); 
-        }
-    }
+    function toggleTheme() {
+        if (themeToggle.checked) {
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark'); 
+        } else {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light'); 
+        }
+    }
 
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.checked = true; 
-    } else {
-        body.classList.remove('dark-mode');
-        themeToggle.checked = false; 
-    }
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.checked = true; 
+    } else {
+        body.classList.remove('dark-mode');
+        themeToggle.checked = false; 
+    }
 
-   themeToggle.addEventListener('change', toggleTheme);
+
+   themeToggle.addEventListener('change', toggleTheme);
 });
 
+>>>>>>> main
 function addNews(newsItem) {
     newsData.unshift(newsItem);
     displayNews(); 
@@ -355,14 +360,17 @@ function toggleAllNews() {
     const currentCount = newsGrid.querySelectorAll('.news-card').length;
     
     if (currentCount === 3) {
+
         displayNews(newsData.length);
         btn.innerHTML = 'Vezi mai puțin ↑';
         btn.classList.add('expanded');
     } else {
+    
         displayNews(3);
         btn.innerHTML = 'Vezi toate →';
         btn.classList.remove('expanded');
         
+
         document.querySelector('.news-section').scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
@@ -419,8 +427,9 @@ window.openNewsModal = openNewsModal;
 window.closeNewsModal = closeNewsModal;
 window.toggleAllNews = toggleAllNews;
 
+
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { addNews, displayNews, changeDisplayCount };
 }
 
-console.log("Tot ok, sper!");
+console.log("tot ok, sper!");
