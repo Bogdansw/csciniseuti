@@ -424,3 +424,16 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 console.log("Tot ok, sper!");
+
+document.addEventListener('DOMContentLoaded', () => {
+    const testButton = document.getElementById('testButton');
+    
+    if (testButton) {
+        testButton.addEventListener('click', function() {
+            console.log(' Butonul a fost apăsat!');
+
+            this.clickCount = (this.clickCount || 0) + 1;
+        });
+        
+    }
+});
