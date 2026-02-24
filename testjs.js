@@ -123,7 +123,8 @@ const newsData = [
             
             <p><strong>Pentru informații și consiliere, contactați-ne la numărul: +37325451307</strong></p>
         `,
-        image: "hiv.jpg"    },
+        image: "hiv.jpg"
+    },
     {
         id: 5,
         date: "14 Noiembrie, 2024",
@@ -306,6 +307,223 @@ function animateOnScroll() {
     cards.forEach(card => observer.observe(card));
 }
 
+
+const searchStyles = `
+    .search-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px 10px;
+        gap: 16px;
+    }
+
+    .search-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 550px;
+        background: #fff;
+        border: 2px solid #dce3ec;
+        border-radius: 12px;
+        padding: 10px 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-wrapper:focus-within {
+        border-color: #3a86ff;
+        box-shadow: 0 4px 18px rgba(58,134,255,0.18);
+    }
+
+    .search-icon {
+        font-size: 18px;
+        color: #aab4c4;
+        flex-shrink: 0;
+    }
+
+    .search-input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        color: #2d3748;
+        background: transparent;
+        font-family: inherit;
+    }
+
+    .search-input::placeholder {
+        color: #b0bec5;
+    }
+
+    .search-btn {
+        background: #3a86ff;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 7px 18px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.1s;
+        font-family: inherit;
+        flex-shrink: 0;
+    }
+
+    .search-btn:hover {
+        background: #2563eb;
+    }
+
+    .search-btn:active {
+        transform: scale(0.97);
+    }
+
+    .search-result-box {
+        width: 100%;
+        max-width: 550px;
+        background: #f0f6ff;
+        border: 1.5px solid #bcd4fc;
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-size: 15px;
+        color: #1e3a5f;
+        display: none;
+        animation: fadeInResult 0.3s ease;
+    }
+
+    .search-result-box.visible {
+        display: block;
+    }
+
+    .search-result-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7eaaee;
+        margin-bottom: 6px;
+    }
+
+    .search-result-text {
+        font-size: 15px;
+        color: #1e3a5f;
+        word-break: break-word;
+    }
+
+    @keyframes fadeInResult {
+        from { opacity: 0; transform: translateY(-6px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Dark mode support */
+    body.dark-mode .search-wrapper {
+        background: #1e2a3a;
+        border-color: #2e4060;
+    }
+
+    body.dark-mode .search-input {
+        color: #e2e8f0;
+    }
+
+    body.dark-mode .search-result-box {
+        background: #1a2840;
+        border-color: #2e4f7c;
+        color: #cfe0ff;
+    }
+
+    body.dark-mode .search-result-text {
+        color: #cfe0ff;
+    }
+`;
+
+function injectSearchStyles() {
+    const styleTag = document.createElement('style');
+    styleTag.id = 'search-styles';
+    styleTag.textContent = searchStyles;
+    document.head.appendChild(styleTag);
+}
+
+function createSearchSection() {
+    const section = document.createElement('section');
+    section.className = 'search-section';
+    section.id = 'searchSection';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'search-wrapper';
+
+    const icon = document.createElement('span');
+    icon.className = 'search-icon';
+    
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'search-input';
+    input.id = 'searchInput';
+    input.placeholder = 'Caută ceva...';
+
+    const btn = document.createElement('button');
+    btn.className = 'search-btn';
+    btn.textContent = 'Caută';
+
+    wrapper.appendChild(icon);
+    wrapper.appendChild(input);
+    wrapper.appendChild(btn);
+
+    const resultBox = document.createElement('div');
+    resultBox.className = 'search-result-box';
+    resultBox.id = 'searchResultBox';
+
+    const resultLabel = document.createElement('div');
+    resultLabel.className = 'search-result-label';
+    resultLabel.textContent = 'Ai căutat:';
+
+    const resultText = document.createElement('div');
+    resultText.className = 'search-result-text';
+    resultText.id = 'searchResultText';
+
+    resultBox.appendChild(resultLabel);
+    resultBox.appendChild(resultText);
+
+    section.appendChild(wrapper);
+    section.appendChild(resultBox);
+
+
+    function handleSearch() {
+        const query = input.value.trim();
+        if (!query) return;
+
+        resultText.textContent = query;
+        resultBox.classList.add('visible');
+
+        resultBox.style.animation = 'none';
+        resultBox.offsetHeight; 
+        resultBox.style.animation = '';
+    }
+
+    btn.addEventListener('click', handleSearch);
+
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    });
+
+    return section;
+}
+
+function initSearchBox() {
+    injectSearchStyles();
+    const searchSection = createSearchSection();
+
+    const newsSection = document.querySelector('.news-section');
+    if (newsSection) {
+        newsSection.parentNode.insertBefore(searchSection, newsSection);
+    } else {
+        document.body.appendChild(searchSection);
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     displayNews();
     setTimeout(animateOnScroll, 100);
@@ -375,6 +593,8 @@ function toggleAllNews() {
 document.addEventListener('DOMContentLoaded', () => {
     displayNews(3);
     setTimeout(animateOnScroll, 100);
+
+    initSearchBox();
     
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
@@ -431,9 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (testButton) {
         testButton.addEventListener('click', function() {
             console.log(' Butonul a fost apăsat!');
-
             this.clickCount = (this.clickCount || 0) + 1;
         });
-        
     }
 });
