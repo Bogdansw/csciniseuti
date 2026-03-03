@@ -8,10 +8,8 @@ const newsData = [
         fullContent: `
             <h2>Ziua Mondială fără Tutun - 31 Mai 2024</h2>
             <p>Ziua mondială fără tutun, marcată anual pe 31 mai, reprezintă un prilej important pentru a atrage atenția asupra efectelor nocive ale consumului de tutun și pentru a promova politici eficiente de reducere a consumului de tutun.</p>
-            
             <h3>De ce este important?</h3>
             <p>Consumul de tutun este una dintre cele mai mari amenințări la adresa sănătății publice cu care s-a confruntat vreodată lumea, ucigând peste 8 milioane de oameni pe an în întreaga lume. Dintre aceștia, mai mult de 7 milioane sunt consumatori direcți, iar aproximativ 1,2 milioane sunt nefumători expuși fumului pasiv.</p>
-            
             <h3>Beneficiile renunțării la fumat:</h3>
             <ul>
                 <li>După 20 de minute: Tensiunea arterială și pulsul scad</li>
@@ -20,7 +18,6 @@ const newsData = [
                 <li>După 1 an: Riscul de boală cardiacă scade cu jumătate</li>
                 <li>După 10 ani: Riscul de cancer pulmonar scade cu jumătate</li>
             </ul>
-            
             <h3>Cum te putem ajuta?</h3>
             <p>Centrul nostru oferă consultații gratuite pentru persoanele care doresc să renunțe la fumat. Programează-te la medicul de familie pentru mai multe informații și suport personalizat.</p>
         `,
@@ -35,7 +32,6 @@ const newsData = [
         fullContent: `
             <h2>Ziua Internațională a Medicinei de Familie</h2>
             <p>Ziua internațională a medicilor de familie se sărbătorește anual în data de 19 mai. Scopul este de a recunoaște contribuția esențială a medicilor de familie în sistemul de sănătate și de a promova importanța îngrijirii primare.</p>
-            
             <h3>Rolul medicului de familie</h3>
             <p>Medicul de familie este primul contact al pacientului cu sistemul de sănătate și asigură:</p>
             <ul>
@@ -45,10 +41,8 @@ const newsData = [
                 <li>Coordonarea îngrijirii cu alți specialiști</li>
                 <li>Monitorizarea bolilor cronice</li>
             </ul>
-            
             <h3>Serviciile noastre</h3>
             <p>La Centrul de Sănătate Cinișeuți, oferim o gamă completă de servicii de medicină de familie, inclusiv consultații preventive, tratamente pentru afecțiuni acute și cronice, și îngrijire personalizată pentru toate vârstele.</p>
-            
             <p><strong>Program: Luni - Vineri, 08:00 - 18:00</strong></p>
         `,
         image: "medicifamilie.jpg"
@@ -62,10 +56,8 @@ const newsData = [
         fullContent: `
             <h2>Ziua de Luptă împotriva Hipertensiunii Arteriale</h2>
             <p>În fiecare an, la 17 mai, este marcată Ziua mondială de luptă împotriva hipertensiunii arteriale – o inițiativă globală menită să crească gradul de conștientizare cu privire la această afecțiune și la impactul ei asupra sănătății.</p>
-            
             <h3>Ce este hipertensiunea arterială?</h3>
             <p>Hipertensiunea arterială (tensiunea arterială crescută) este o afecțiune cronică în care presiunea sângelui în artere este constant crescută. Este cunoscută și ca "ucigașul tăcut" deoarece adesea nu prezintă simptome evidente.</p>
-            
             <h3>Valori normale vs. hipertensiune:</h3>
             <ul>
                 <li><strong>Normal:</strong> Sub 120/80 mmHg</li>
@@ -73,7 +65,6 @@ const newsData = [
                 <li><strong>Hipertensiune stadiul 1:</strong> 130-139/80-89 mmHg</li>
                 <li><strong>Hipertensiune stadiul 2:</strong> 140/90 mmHg sau mai mare</li>
             </ul>
-            
             <h3>Prevenție și control</h3>
             <p>Modificări ale stilului de viață care pot ajuta:</p>
             <ul>
@@ -84,7 +75,6 @@ const newsData = [
                 <li>Gestionarea stresului</li>
                 <li>Renunțarea la fumat</li>
             </ul>
-            
             <p><strong>Recomandare:</strong> Monitorizați-vă tensiunea arterială regulat și consultați medicul de familie pentru evaluare și tratament personalizat.</p>
         `,
         image: "tensiune.webp"
@@ -98,10 +88,8 @@ const newsData = [
         fullContent: `
             <h2>Ziua Mondială de Luptă împotriva SIDA</h2>
             <p>În fiecare an, pe 1 decembrie, comunitatea globală marchează Ziua Mondială de Luptă împotriva SIDA, o zi dedicată sensibilizării cu privire la epidemia de HIV/SIDA și comemorării celor care au pierdut lupta cu această boală.</p>
-            
             <h3>Informații esențiale despre HIV/SIDA</h3>
             <p>HIV (virusul imunodeficienței umane) este un virus care atacă sistemul imunitar al organismului. Dacă nu este tratat, HIV poate duce la SIDA (sindromul imunodeficienței dobândite).</p>
-            
             <h3>Căi de transmitere:</h3>
             <ul>
                 <li>Contact sexual neprotejat</li>
@@ -109,7 +97,6 @@ const newsData = [
                 <li>De la mamă la copil în timpul sarcinii, nașterii sau alăptării</li>
                 <li>Transfuzii de sânge contaminat (foarte rar în prezent)</li>
             </ul>
-            
             <h3>Prevenție</h3>
             <ul>
                 <li>Utilizarea prezervativelor</li>
@@ -117,10 +104,8 @@ const newsData = [
                 <li>Nu partajați ace sau seringi</li>
                 <li>Tratament preventiv pentru persoanele cu risc crescut</li>
             </ul>
-            
             <h3>Testare și confidențialitate</h3>
             <p>Testarea pentru HIV este gratuită și confidențială. Un diagnostic precoce permite începerea tratamentului la timp și o viață normală.</p>
-            
             <p><strong>Pentru informații și consiliere, contactați-ne la numărul: +37325451307</strong></p>
         `,
         image: "hiv.jpg"
@@ -134,14 +119,12 @@ const newsData = [
         fullContent: `
             <h2>Ziua Mondială a Diabetului - 14 Noiembrie</h2>
             <p>Ziua Mondială a Diabetului, marcată pe 14 noiembrie, este cea mai mare campanie de sensibilizare cu privire la diabet din lume. Data a fost aleasă pentru a marca ziua de naștere a lui Frederick Banting, care, împreună cu Charles Best, a descoperit insulina în 1921.</p>
-            
             <h3>Tipuri de diabet:</h3>
             <ul>
                 <li><strong>Diabetul tip 1:</strong> Organismul nu produce insulină</li>
                 <li><strong>Diabetul tip 2:</strong> Organismul nu folosește eficient insulina</li>
                 <li><strong>Diabetul gestațional:</strong> Apare în timpul sarcinii</li>
             </ul>
-            
             <h3>Simptome de alarmă:</h3>
             <ul>
                 <li>Sete excesivă și urinare frecventă</li>
@@ -151,7 +134,6 @@ const newsData = [
                 <li>Vedere încețoșată</li>
                 <li>Vindecarea lentă a rănilor</li>
             </ul>
-            
             <h3>Prevenție și management:</h3>
             <ul>
                 <li>Alimentație echilibrată și sănătoasă</li>
@@ -160,7 +142,6 @@ const newsData = [
                 <li>Monitorizarea regulată a glicemiei</li>
                 <li>Respectarea tratamentului prescris</li>
             </ul>
-            
             <p><strong>Oferim teste gratuite de glicemie și consultații pentru prevenția și managementul diabetului. Programați-vă astăzi!</strong></p>
         `,
         image: "diabet.jpg"
@@ -174,10 +155,8 @@ const newsData = [
         fullContent: `
             <h2>Ziua Mondială a Sănătății Mentale</h2>
             <p>Ziua Mondială a Sănătății Mentale, sărbătorită pe 10 octombrie, are ca scop creșterea gradului de conștientizare cu privire la problemele de sănătate mintală din întreaga lume și mobilizarea eforturilor în sprijinul sănătății mentale.</p>
-            
             <h3>De ce este importantă sănătatea mentală?</h3>
             <p>Sănătatea mentală este la fel de importantă ca și sănătatea fizică. Afectează modul în care gândim, simțim și acționăm. De asemenea, ajută la determinarea modului în care gestionăm stresul, ne raportăm la alții și luăm decizii.</p>
-            
             <h3>Semne că ai putea avea nevoie de ajutor:</h3>
             <ul>
                 <li>Tristețe sau depresie prelungită</li>
@@ -188,7 +167,6 @@ const newsData = [
                 <li>Dificultăți de concentrare</li>
                 <li>Modificări ale apetitului</li>
             </ul>
-            
             <h3>Cum să îți îngrijești sănătatea mentală:</h3>
             <ul>
                 <li>Vorbește despre sentimentele tale</li>
@@ -200,49 +178,92 @@ const newsData = [
                 <li>Fă pauze regulate</li>
                 <li>Practică relaxarea și mindfulness</li>
             </ul>
-            
             <p><strong>Dacă tu sau cineva pe care îl cunoști se confruntă cu probleme de sănătate mintală, nu ezitați să căutați ajutor profesional. Suntem aici pentru a vă susține.</strong></p>
-            
             <p><em>Linia Telefonică de Asistență în Criză: 0 800 0 8000 (apel gratuit, 24/7)</em></p>
         `,
         image: "sanatatementala.png"
     }
 ];
+//stiri citite 
+function getReadNews() {
+    try {
+        return new Set(JSON.parse(localStorage.getItem('readNews') || '[]'));
+    } catch {
+        return new Set();
+    }
+}
+
+function markAsRead(id) {
+    const read = getReadNews();
+    read.add(id);
+    localStorage.setItem('readNews', JSON.stringify([...read]));
+}
 
 function createNewsCard(news) {
+    const isRead = getReadNews().has(news.id);
     return `
-        <div class="news-card" data-id="${news.id}">
+        <div class="news-card ${isRead ? 'news-card--read' : ''}" data-id="${news.id}">
             <div class="card-image">
-                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/400x250?text=Imagine+Indisponibilă'">
+                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/400x250?text=Imagine+Indisponibila'">
                 <div class="card-date">${news.date}</div>
+                ${isRead ? '<div class="card-read-badge">Citit</div>' : ''}
             </div>
             <div class="card-content">
                 <div class="card-category">${news.category}</div>
                 <h3 class="card-title">${news.title}</h3>
                 <p class="card-description">${news.description}</p>
-                <span class="card-link">Citește mai mult</span>
+                <span class="card-link">${isRead ? 'Citește din nou' : 'Citește mai mult'}</span>
             </div>
         </div>
     `;
 }
 
+function displayNews(count = 3) {
+    const newsGrid = document.getElementById('newsGrid');
+    if (!newsGrid) return;
+
+    newsGrid.innerHTML = newsData.slice(0, count).map(createNewsCard).join('');
+
+    newsGrid.querySelectorAll('.news-card').forEach(card => {
+        card.addEventListener('click', function () {
+            openNewsModal(parseInt(this.getAttribute('data-id')));
+        });
+    });
+}
+
 function openNewsModal(newsId) {
     const news = newsData.find(n => n.id === newsId);
     if (!news) return;
-    
-    let modal = document.getElementById('newsModal');
-    if (!modal) {
-        modal = document.createElement('div');
-        modal.id = 'newsModal';
-        modal.className = 'news-modal';
-        document.body.appendChild(modal);
+
+    markAsRead(newsId);
+
+    const card = document.querySelector(`.news-card[data-id="${newsId}"]`);
+    if (card) {
+        card.classList.add('news-card--read');
+        card.querySelector('.card-link').textContent = 'Citește din nou';
+        if (!card.querySelector('.card-read-badge')) {
+            const badge = Object.assign(document.createElement('div'), {
+                className: 'card-read-badge',
+                textContent: 'Citit'
+            });
+            card.querySelector('.card-image').appendChild(badge);
+        }
     }
-    
+
+    const modal = document.getElementById('newsModal') ?? (() => {
+        const m = Object.assign(document.createElement('div'), {
+            id: 'newsModal',
+            className: 'news-modal'
+        });
+        document.body.appendChild(m);
+        return m;
+    })();
+
     modal.innerHTML = `
         <div class="modal-content">
             <button class="modal-close" onclick="closeNewsModal()">&times;</button>
             <div class="modal-header">
-                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/800x400?text=Imagine+Indisponibilă'">
+                <img src="${news.image}" alt="${news.title}" onerror="this.src='https://via.placeholder.com/800x400?text=Imagine+Indisponibila'">
                 <div class="modal-meta">
                     <span class="modal-date">📅 ${news.date}</span>
                     <span class="modal-category">${news.category}</span>
@@ -253,60 +274,67 @@ function openNewsModal(newsId) {
             </div>
         </div>
     `;
-    
+
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
 
 function closeNewsModal() {
     const modal = document.getElementById('newsModal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
+    if (!modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
-function displayNews(count = 3) {
+function toggleAllNews() {
     const newsGrid = document.getElementById('newsGrid');
-    
-    if (!newsGrid) return; 
-    
-    const recentNews = newsData.slice(0, count);
-    const newsHTML = recentNews.map(news => createNewsCard(news)).join('');
-    newsGrid.innerHTML = newsHTML;
-    
-    const cards = document.querySelectorAll('.news-card');
-    cards.forEach(card => {
-        card.addEventListener('click', function() {
-            const newsId = parseInt(this.getAttribute('data-id'));
-            openNewsModal(newsId);
-        });
-    });
+    const btn = document.querySelector('.view-all-btn');
+    if (!newsGrid || !btn) return;
+
+    const isExpanded = newsGrid.querySelectorAll('.news-card').length > 3;
+
+    if (isExpanded) {
+        displayNews(3);
+        btn.innerHTML = 'Vezi toate →';
+        document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        displayNews(newsData.length);
+        btn.innerHTML = 'Vezi mai puțin ↑';
+    }
+
+    setTimeout(animateOnScroll, 100);
+}
+
+function addNews(newsItem) {
+    newsData.unshift(newsItem);
+    displayNews();
+    setTimeout(animateOnScroll, 100);
+}
+
+function changeDisplayCount(count) {
+    displayNews(count);
+    setTimeout(animateOnScroll, 100);
 }
 
 function animateOnScroll() {
     const cards = document.querySelectorAll('.news-card');
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '0';
                 entry.target.style.transform = 'translateY(20px)';
-                
                 setTimeout(() => {
                     entry.target.style.transition = 'all 0.5s ease';
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                }, index * 150); 
+                }, index * 150);
+                observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1
-    });
-    
+    }, { threshold: 0.1 });
+
     cards.forEach(card => observer.observe(card));
 }
-
 
 const searchStyles = `
     .search-section {
@@ -316,7 +344,6 @@ const searchStyles = `
         padding: 30px 20px 10px;
         gap: 16px;
     }
-
     .search-wrapper {
         display: flex;
         align-items: center;
@@ -330,18 +357,11 @@ const searchStyles = `
         box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         transition: border-color 0.2s, box-shadow 0.2s;
     }
-
     .search-wrapper:focus-within {
         border-color: #3a86ff;
         box-shadow: 0 4px 18px rgba(58,134,255,0.18);
     }
-
-    .search-icon {
-        font-size: 18px;
-        color: #aab4c4;
-        flex-shrink: 0;
-    }
-
+    .search-icon { font-size: 18px; color: #aab4c4; flex-shrink: 0; }
     .search-input {
         flex: 1;
         border: none;
@@ -351,11 +371,7 @@ const searchStyles = `
         background: transparent;
         font-family: inherit;
     }
-
-    .search-input::placeholder {
-        color: #b0bec5;
-    }
-
+    .search-input::placeholder { color: #b0bec5; }
     .search-btn {
         background: #3a86ff;
         color: #fff;
@@ -369,15 +385,8 @@ const searchStyles = `
         font-family: inherit;
         flex-shrink: 0;
     }
-
-    .search-btn:hover {
-        background: #2563eb;
-    }
-
-    .search-btn:active {
-        transform: scale(0.97);
-    }
-
+    .search-btn:hover { background: #2563eb; }
+    .search-btn:active { transform: scale(0.97); }
     .search-result-box {
         width: 100%;
         max-width: 550px;
@@ -390,11 +399,7 @@ const searchStyles = `
         display: none;
         animation: fadeInResult 0.3s ease;
     }
-
-    .search-result-box.visible {
-        display: block;
-    }
-
+    .search-result-box.visible { display: block; }
     .search-result-label {
         font-size: 11px;
         font-weight: 700;
@@ -403,40 +408,33 @@ const searchStyles = `
         color: #7eaaee;
         margin-bottom: 6px;
     }
-
-    .search-result-text {
-        font-size: 15px;
-        color: #1e3a5f;
-        word-break: break-word;
-    }
-
+    .search-result-text { font-size: 15px; color: #1e3a5f; word-break: break-word; }
     @keyframes fadeInResult {
         from { opacity: 0; transform: translateY(-6px); }
         to   { opacity: 1; transform: translateY(0); }
     }
+    body.dark-mode .search-wrapper { background: #1e2a3a; border-color: #2e4060; }
+    body.dark-mode .search-input { color: #e2e8f0; }
+    body.dark-mode .search-result-box { background: #1a2840; border-color: #2e4f7c; color: #cfe0ff; }
+    body.dark-mode .search-result-text { color: #cfe0ff; }
 
-    /* Dark mode support */
-    body.dark-mode .search-wrapper {
-        background: #1e2a3a;
-        border-color: #2e4060;
-    }
-
-    body.dark-mode .search-input {
-        color: #e2e8f0;
-    }
-
-    body.dark-mode .search-result-box {
-        background: #1a2840;
-        border-color: #2e4f7c;
-        color: #cfe0ff;
-    }
-
-    body.dark-mode .search-result-text {
-        color: #cfe0ff;
+    .card-read-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        backdrop-filter: blur(4px);
+        pointer-events: none;
     }
 `;
 
 function injectSearchStyles() {
+    if (document.getElementById('search-styles')) return;
     const styleTag = document.createElement('style');
     styleTag.id = 'search-styles';
     styleTag.textContent = searchStyles;
@@ -453,7 +451,6 @@ function createSearchSection() {
 
     const icon = document.createElement('span');
     icon.className = 'search-icon';
-    
 
     const input = document.createElement('input');
     input.type = 'text';
@@ -483,30 +480,21 @@ function createSearchSection() {
 
     resultBox.appendChild(resultLabel);
     resultBox.appendChild(resultText);
-
     section.appendChild(wrapper);
     section.appendChild(resultBox);
-
 
     function handleSearch() {
         const query = input.value.trim();
         if (!query) return;
-
         resultText.textContent = query;
         resultBox.classList.add('visible');
-
         resultBox.style.animation = 'none';
-        resultBox.offsetHeight; 
+        resultBox.offsetHeight;
         resultBox.style.animation = '';
     }
 
     btn.addEventListener('click', handleSearch);
-
-    input.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-            handleSearch();
-        }
-    });
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') handleSearch(); });
 
     return section;
 }
@@ -514,7 +502,6 @@ function createSearchSection() {
 function initSearchBox() {
     injectSearchStyles();
     const searchSection = createSearchSection();
-
     const newsSection = document.querySelector('.news-section');
     if (newsSection) {
         newsSection.parentNode.insertBefore(searchSection, newsSection);
@@ -522,72 +509,29 @@ function initSearchBox() {
         document.body.appendChild(searchSection);
     }
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    displayNews();
-    setTimeout(animateOnScroll, 100);
+//theme storagw
+function initTheme() {
     const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    function toggleTheme() {
-        if (themeToggle.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark'); 
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light'); 
-        }
-    }
+    if (!themeToggle) return;
 
     const savedTheme = localStorage.getItem('theme');
-    
     if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.checked = true; 
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
     } else {
-        body.classList.remove('dark-mode');
-        themeToggle.checked = false; 
+        document.body.classList.remove('dark-mode');
+        themeToggle.checked = false;
     }
 
-   themeToggle.addEventListener('change', toggleTheme);
-});
-
-function addNews(newsItem) {
-    newsData.unshift(newsItem);
-    displayNews(); 
-    setTimeout(animateOnScroll, 100); 
-}
-
-function changeDisplayCount(count) {
-    displayNews(count);
-    setTimeout(animateOnScroll, 100);
-}
-
-function toggleAllNews() {
-    const newsGrid = document.getElementById('newsGrid');
-    const btn = document.querySelector('.view-all-btn');
-    
-    if (!newsGrid || !btn) return;
-    
-    const currentCount = newsGrid.querySelectorAll('.news-card').length;
-    
-    if (currentCount === 3) {
-        displayNews(newsData.length);
-        btn.innerHTML = 'Vezi mai puțin ↑';
-        btn.classList.add('expanded');
-    } else {
-        displayNews(3);
-        btn.innerHTML = 'Vezi toate →';
-        btn.classList.remove('expanded');
-        
-        document.querySelector('.news-section').scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-    
-    setTimeout(animateOnScroll, 100);
+    themeToggle.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -595,44 +539,26 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(animateOnScroll, 100);
 
     initSearchBox();
-    
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    initTheme();
 
-    function toggleTheme() {
-        if (themeToggle.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark'); 
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light'); 
-        }
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.checked = true; 
-    } else {
-        body.classList.remove('dark-mode');
-        themeToggle.checked = false; 
-    }
-
-    themeToggle.addEventListener('change', toggleTheme);
-    
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         const modal = document.getElementById('newsModal');
-        if (event.target === modal) {
-            closeNewsModal();
-        }
+        if (event.target === modal) closeNewsModal();
     });
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeNewsModal();
-        }
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeNewsModal();
     });
+
+    const testButton = document.getElementById('testButton');
+    if (testButton) {
+        testButton.addEventListener('click', function () {
+            console.log('Butonul a fost apăsat!');
+            this.clickCount = (this.clickCount || 0) + 1;
+        });
+    }
+
+    console.log('Tot ok, sper!');
 });
 
 window.openNewsModal = openNewsModal;
@@ -642,16 +568,3 @@ window.toggleAllNews = toggleAllNews;
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { addNews, displayNews, changeDisplayCount };
 }
-
-console.log("Tot ok, sper!");
-
-document.addEventListener('DOMContentLoaded', () => {
-    const testButton = document.getElementById('testButton');
-    
-    if (testButton) {
-        testButton.addEventListener('click', function() {
-            console.log(' Butonul a fost apăsat!');
-            this.clickCount = (this.clickCount || 0) + 1;
-        });
-    }
-});
